@@ -1,0 +1,29 @@
+body, html{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+.header{
+height: 50px;
+width: 100%;
+background: red;
+position: relative;
+   
+
+
+.menu{
+        position: fixed;
+        width: 400px;
+        height: 100%;
+        background: gray;
+        right: 0px;
+        top: 0px;
+        transition: all 0.6s;
+    }
+
+
+
+}
