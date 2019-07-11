@@ -28,34 +28,35 @@ body, html {
   direction: rtl;
 }
 
-.header .app_name {
-  font-size: 13px;
-  color: #ffff;
-  padding-right: 25px;
-}
-
 .header .left_box {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header .btn_menu_header {
+.header .left_box .btn_menu_header {
   margin-right: 10px;
+  cursor: pointer;
 }
 
-.header .btn_menu_header i {
+.header .left_box .btn_menu_header:active i {
+  color: #000 !important;
+}
+
+.header .left_box .btn_menu_header:hover {
+  transform: scale(0.9);
+}
+
+.header .left_box .btn_menu_header i {
   color: #fff;
   font-size: 39px;
   transition: all 0.5s;
 }
 
-.header .btn_menu_header:active i {
-  color: #000 !important;
-}
-
-.header .btn_menu_header:hover {
-  transform: scale(0.9);
+.header .left_box .app_name {
+  font-size: 13px;
+  color: #ffff;
+  padding-right: 25px;
 }
 
 .header .menu {
