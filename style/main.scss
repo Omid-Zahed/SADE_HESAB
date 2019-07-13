@@ -169,7 +169,19 @@
             text-align: center;
             background: #345eaa;
             border-radius: 10px;
-            
+            position: relative;
+
+            .label_unit{
+                position: absolute;
+                bottom: 17px;
+                left: 6px;
+                background: #24bc12;
+                padding: 0px 10px;
+                /* border-radius: 10px; */
+                color: #fff;
+                font-size: 12px;
+                transform: rotate(35deg);
+            }
 
             .btn_get{
                 width: 50%;
@@ -198,6 +210,7 @@
             }
                 }
             input{
+                padding: 10px 20px;
                 width: 100%;
                 text-align: center;
                 height: 50px;
