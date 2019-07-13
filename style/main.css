@@ -26,6 +26,8 @@ body, html {
   justify-content: space-between;
   align-items: center;
   direction: rtl;
+  position: fixed;
+  bottom: 0px;
 }
 
 .header .left_box {
