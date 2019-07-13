@@ -228,3 +228,21 @@
         }
 
 
+      //==============================
+     // قسمت اینپوت پول 
+    //=============================
+
+    .show_money{
+        
+        background: #345eaa;
+        .money{
+            font-size: 64px;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            display: block;
+            text-shadow: 0px 11px 10px #000;
+            
+        }
+
+    }
