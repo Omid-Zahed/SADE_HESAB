@@ -2,78 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>سیستم حساب رسی </title>
-    <meta name="theme-color" content="#345eaa">
+    <meta name="theme-color" content="#345eaa" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script  src="plugin/jquery/jquery.js"></script>
+    <script  src="plugin/vue/vue.js"></script>
     <link href="style/main.css" rel="stylesheet">
     <link href="plugin/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="app">
+
+
+ 
+    <div  id="app">
 
        
 
-        <section class="show_money">
-            <a class="money">129,000,000</a>
-     
-        </section>
-
-
-
-        <section class="money_picer">
-
-            <span class="btn_get">
-                <a>دریافت کردم</a> 
-            </span>
-
-            <span class="btn_get">
-                <a>پرداخت کردم</a> 
-            </span>
-                   
-           
-          
-            <input type="number" placeholder="مبلغ ؟ را ">
-            <span class="label_unit">تومان</span>
-        </section>
-
-
-        <div   class="header">
-              
-            
-            <div class="left_box"> 
-                <a class="btn_menu_header" id="btn_show_menu"> <i class="la la-navicon"></i>    </a>
-                <a class="app_name">برنامه حساب رسی</a>
-            </div>
-
+            <section class="show_money">
+                <a class="money">{{show_money}}</a>
+         
+            </section>
+    
+    
+    
+            <section class="money_picer">
+    
+                <span class="btn_get">
+                    <a>دریافت کردم</a> 
+                </span>
+    
+                <span class="btn_get">
+                    <a>پرداخت کردم</a> 
+                </span>
+                       
                
+              
+                <input v-model="money" type="number" placeholder="مبلغ ؟ را ">
+                <span class="label_unit">{{unit}}</span>
+            </section>
+    
+    
+            <div   class="header">
+                  
+                
+                <div class="left_box"> 
+                    <a class="btn_menu_header" id="btn_show_menu"> <i class="la la-navicon"></i>    </a>
+                    <a class="app_name">برنامه حساب رسی</a>
+                </div>
+    
+                   
+            
+         
+    
+    
+           
+              
+    
+            <span class="menu" id="mobile_menu"></span>
+      
+        </div>
+    
+    
+        </div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script >
+    var r;
+    var asa=new Vue({
+        el:"#app",
+        data:{
+            money:"40000",
+            money_input:22222,
+            unit:"تومان"
+        },
+        computed: {
+            show_money:function(){
+               return format_money(this.money,",")
+            }
+        },
+    });
+
+
+
+
+
+    function format_money(int_money,string_br){
         
-     
+        let str_money="";
+        int_money=int_money.toString().split("");
+        var ii=0;
 
+        for (let i = int_money.length; i > 0; i--)
+        {
+                        ii=ii+1;
+                        str_money=int_money[i-1]+str_money;
+                        if(ii%3==0 && i>1){str_money=string_br+str_money;}
+        }
 
-       
-          
-
-        <span class="menu" id="mobile_menu"></span>
-  
-    </div>
-
-
-    </div>
-
-
-
+        return str_money;}
 
 
 
@@ -81,9 +128,8 @@
 
 
 
+</script>
+    <script  src="script/main.js"></script>
 
-
-<script defer src="script/jquery.js"></script>
-<script defer src="script/main.js"></script>
 </body>
 </html>
